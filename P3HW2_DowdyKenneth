@@ -1,0 +1,52 @@
+
+# Name: Kenneth Dowdy
+# Date: 10/10/2026
+# Assignment: P3HW2 - Employee Pay Calculator
+# Description: Calculate an employee's regular pay, overtime pay,
+# and gross pay based on hours worked and hourly pay rate.
+
+# Pseudocode:
+# Ask the user for the employee's name.
+# Ask the user for the hours worked this week.
+# Ask the user for the employee's hourly pay rate.
+# If hours worked are greater than 40:
+#     Calculate regular pay for 40 hours.
+#     Calculate overtime hours.
+#     Calculate overtime pay at 1.5 times the regular rate.
+# Else:
+#     Calculate regular pay using the hours worked.
+#     Set overtime hours and overtime pay to zero.
+# Calculate gross pay by adding regular pay and overtime pay.
+# Display the employee's pay information.
+
+# Get employee information
+employee_name = input("Enter employee's name: ")
+hours_worked = float(input("Enter number of hours worked this week: "))
+pay_rate = float(input("Enter employee's pay rate: "))
+
+# Calculate regular and overtime pay
+if hours_worked > 40:
+    regular_hours = 40
+    overtime_hours = hours_worked - 40
+    regular_pay = regular_hours * pay_rate
+    overtime_pay = overtime_hours * (pay_rate * 1.5)
+else:
+    regular_hours = hours_worked
+    overtime_hours = 0
+    regular_pay = regular_hours * pay_rate
+    overtime_pay = 0
+
+# Calculate gross pay
+gross_pay = regular_pay + overtime_pay
+
+# Display results
+print("------------------------------------------")
+print(f"Employee name: {employee_name}")
+print()
+print(f"{'Hours Worked':<25}{hours_worked:.1f}")
+print(f"{'Pay Rate':<25}${pay_rate:.2f}")
+print(f"{'Overtime Hours':<25}{overtime_hours:.1f}")
+print(f"{'Overtime Pay':<25}${overtime_pay:.2f}")
+print(f"{'Pay for Regular Hours':<25}${regular_pay:.2f}")
+print(f"{'Gross Pay':<25}${gross_pay:.2f}")
+print("------------------------------------------")
