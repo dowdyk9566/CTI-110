@@ -1,3 +1,7 @@
+# Name: Kenneth Dowdy
+# Date: 10/27/2026
+# Assignment: P4LAB1 - Turtle Graphics
+# Description: Draw a simple house using turtle graphics
 import turtle
 
 #Setup the window background and turtle screen
